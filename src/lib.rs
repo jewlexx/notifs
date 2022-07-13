@@ -16,5 +16,5 @@ mod ffi {
 }
 
 pub fn is_compatible() -> bool {
-    ffi::IsCompatible() == 0
+    ffi::IsCompatible()
 }
