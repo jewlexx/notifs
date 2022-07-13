@@ -4,6 +4,13 @@ enum WinToastDismissalReason {
     TimedOut,
 }
 
+#[cxx::bridge]
+mod ffi {
+    extern "C++" {
+        include!("../include/WinToasts/src/wintoastlib.h");
+    }
+}
+
 extern "C" {
     fn IsCompatible() -> cty::c_int;
 
