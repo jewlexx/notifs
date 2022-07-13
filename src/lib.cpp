@@ -7,6 +7,6 @@ static int IsCompatible()
     return WinToast::isCompatible() ? 0 : 1;
 }
 
-class CustomHandler : public IWinToastHandler
+struct CustomHandler : public IWinToastHandler
 {
 };
