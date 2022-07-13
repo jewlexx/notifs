@@ -1,4 +1,4 @@
-extern "C++" {
+extern "C" {
     fn IsCompatible() -> cty::c_int;
 }
 
