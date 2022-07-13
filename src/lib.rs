@@ -11,7 +11,7 @@ mod ffi {
 
         include!("lib.cpp");
 
-        fn IsCompatible() -> u8;
+        fn IsCompatible() -> bool;
     }
 }
 
