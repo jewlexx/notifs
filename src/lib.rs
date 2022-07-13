@@ -18,3 +18,13 @@ mod ffi {
 pub fn is_compatible() -> bool {
     ffi::IsCompatible()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_compatible() {
+        assert(is_compatible())
+    }
+}
