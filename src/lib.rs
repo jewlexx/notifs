@@ -25,6 +25,6 @@ mod tests {
 
     #[test]
     fn test_is_compatible() {
-        assert(is_compatible())
+        assert!(is_compatible())
     }
 }
