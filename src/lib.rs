@@ -6,16 +6,15 @@ mod ffi {
         TimedOut = 2,
     }
 
-    extern "C++" {
+    unsafe extern "C++" {
         include!("../include/WinToasts/src/wintoastlib.h");
+
+        include!("lib.cpp");
+
+        fn IsCompatible() -> u8;
     }
 }
 
-extern "C" {
-    fn IsCompatible() -> cty::c_int;
-
-}
-
 pub fn is_compatible() -> bool {
-    unsafe { IsCompatible() == 0 }
+    ffi::IsCompatible() == 0
 }
